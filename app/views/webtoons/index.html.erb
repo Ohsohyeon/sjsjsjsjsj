@@ -1,0 +1,36 @@
+
+
+<h1>Listing Webtoons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Webtoon name</th>
+      <th>Pre day</th>
+      <th>Bring day<th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @webtoons.each do |webtoon| %>
+      <tr>
+        <td><%= webtoon.wtname %></td>
+        <td><%= webtoon.pre_day %></td>
+        <td><%= webtoon.bring_day %></td>
+        <td><%= link_to 'Show', webtoon %></td>
+        <td><%= link_to 'Edit', edit_webtoon_path(webtoon) %></td>
+        <td><%= link_to 'Destroy', webtoon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><p></p><%= @notify %></td>
+      </tr>
+
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Webtoon', new_webtoon_path %>
+
+

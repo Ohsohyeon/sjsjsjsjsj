@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @webtoon.url %>
+</p>
+<p>
+  <strong>Pre day:</strong>
+  <%= @webtoon.pre_day %>
+</p>
+<p>
+		<strong>Bring day:</strong>
+		<%= @webtoon.bring_day %>
+</p>
+
+<%= link_to 'Edit', edit_webtoon_path(@webtoon) %> |
+<%= link_to 'Back', webtoons_path %>
+
+<!--여기서는 등록된 웹툰목록을 모두 보여준다.-->
